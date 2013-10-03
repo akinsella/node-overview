@@ -1,0 +1,25 @@
+
+
+/* Ubuntu */
+@font-face {
+	font-family:'Ubuntu Regular';
+	src:local('Ubuntu Regular'),
+		url(../fonts/Ubuntu-R.ttf) format('truetype');
+	}
+@font-face {
+	font-family:'Ubuntu Light';
+	src:local('Ubuntu Light'),
+		url(../fonts/Ubuntu-L.ttf) format('truetype');
+	}
+@font-face {
+	font-family:'Ubuntu Bold';
+	src:local('Ubuntu Bold'),
+		url(../fonts/Ubuntu-B.ttf) format('truetype');
+	}
+
+/* Linker */
+@font-face {
+	font-family:'Target Blank';
+	src:url(../fonts/TargetBlank.otf) format('opentype'),
+		url(../fonts/TargetBlank.svg#TargetBlank) format('svg');
+	}

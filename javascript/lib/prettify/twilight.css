@@ -1,20 +1,20 @@
 /* Pretty printing styles. Used with prettify.js. */
 /* Twilight theme by Alexis Kinsella */
 
-pre.prettyprint{background:#141414;color:#f8f8f8;}
-pre.prettyprint span.str,pre.prettyprint span.atv{color:#8f9d6a;}
-pre.prettyprint span.kwd,pre.prettyprint span.pun{color:#cda869;}
-pre.prettyprint span.com{color:#5f5a60;font-style:italic;}
-pre.prettyprint span.typ{color:#9b703f;}
-pre.prettyprint span.lit{color:#cf6a4c;}
-pre.prettyprint span.pln{color:#7587a6;}
-pre.prettyprint span.tag{color:#ac885b;}
-pre.prettyprint span.atn{color:#e0c589;}
-pre.prettyprint span.dec{color:#494949;}
+pre.prettyprint{background:#323232;color:white;}
+pre.prettyprint span.str,pre.prettyprint span.atv{color: #b3c872;}
+pre.prettyprint span.kwd,pre.prettyprint span.pun{color: #EFC773;}
+pre.prettyprint span.com{color:#8A8A8A;font-style:italic;}
+pre.prettyprint span.typ{color:white;}
+pre.prettyprint span.lit{color: #839EB5;}
+pre.prettyprint span.pln{color:#E8E8E8;}
+pre.prettyprint span.tag{color:blue;}
+pre.prettyprint span.atn{color:red;}
+pre.prettyprint span.dec{color:yellow;}
 
 
 pre.prettyprint, code.prettyprint {
-    background-color: #000;
+    background-color: #323232;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     -o-border-radius: 8px;

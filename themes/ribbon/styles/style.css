@@ -12,6 +12,23 @@ BODY {
 	counter-reset:paging;
 }
 
+
+.white {
+    color: white;
+}
+
+.grey {
+    color: #37392F;
+}
+
+.green {
+    color: #7FBF32;
+}
+
+.red {
+    color: #e74c3c;
+}
+
 /* Slide
 ---------------------------------------- */
 .slide:after {
@@ -85,8 +102,12 @@ BODY {
 }
 
 pre.prettyprint, pre.prettyprint code {
-    background: #222!important;
-    font:10px 'Ubuntu Regular', sans-serif;
+    border-radius: 10px;
+}
+
+pre.prettyprint, pre.prettyprint code {
+    background: #323232!important;
+    font:14px 'Ubuntu Regular', sans-serif;
 }
 
 

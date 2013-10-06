@@ -2,147 +2,993 @@
 <html lang="en-US" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
       xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
-	<title>Node.js, tour d'horizon !</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=1274, user-scalable=no">
-	<link rel="stylesheet" href="themes/ribbon/styles/style.css">
+    <title>Node.js, tour d'horizon !</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1274, user-scalable=no">
+    <link rel="stylesheet" href="themes/ribbon/styles/style.css">
 
     <script type="text/javascript" src="javascript/lib/jquery/jquery-1.7.2.min.js"></script>
 
-<!--
-    <link rel="stylesheet" href="http://yandex.st/highlightjs/6.0/styles/sunburst.css">
-    <script src="http://yandex.st/highlightjs/6.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
--->
+    <!--
+        <link rel="stylesheet" href="http://yandex.st/highlightjs/6.0/styles/sunburst.css">
+        <script src="http://yandex.st/highlightjs/6.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    -->
 
-    <link rel="stylesheet" href="javascript/lib/prettify/twilight.css" />
+    <link rel="stylesheet" href="javascript/lib/prettify/twilight.css"/>
     <script src="javascript/lib/prettify/prettify.js"></script>
     <script src="javascript/lib/prettify/lang-css.js"></script>
 
 
-	<!--
-		To apply styles to the certain slides
-		use slide ID to get needed elements
-		-->
-	<style>
+    <!--
+        To apply styles to the certain slides
+        use slide ID to get needed elements
+        -->
+    <style>
 
         h2 {
             font-family: 'Ubuntu Bold';
-            font-size: 48px;
+            font-size: 32px;
             color: #37392F;
         }
+
+        #cover h2 {
+            font-size: 48px;
+        }
+
         h4 {
             font-family: 'Ubuntu Light';
             font-size: 24px;
             color: #7FBF32;
         }
+
         em {
             color: #7FBF32;
         }
-	</style>
+    </style>
 </head>
 <body class="list">
 
-	<header class="caption">
-        <h1>Node.js, tour d'horizon !</h1>
-		<p>Alexis Kinsella, 4 novembre 2013</p>
-	</header>
+<header class="caption">
+    <h1>Node.js, tour d'horizon !</h1>
 
-	<div class="slide" id="Cover"><div>
-		<section>
+    <p>Alexis Kinsella, 4 novembre 2013</p>
+</header>
+
+<div class="slide firstPage" id="cover">
+    <div>
+        <section>
             <div align="center">
                 <img src="pictures/xebia.png" style="width: 360px; position: absolute; top: 10px; left: 10px;"/>
-                 <table border="0" style="width: 100%; margin-top: 120px;">
-                     <tr>
-                         <td style="text-align: center; vertical-align: middle;padding: 20px;">
-                             <img src="pictures/node-logo.png" style="width: 680px;" />
-                         </td>
-                     </tr>
-                     <tr>
-                         <td style="vertical-align: middle; text-align: right;">
+                <table border="0" style="width: 100%; margin-top: 120px;">
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;padding: 20px;">
+                            <img src="pictures/node-logo.png" style="width: 680px;"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle; text-align: right;">
 
-                             <table style="width: 100%;">
-                                 <tr><td><h2>Tour d'horizon !</h2></td></tr>
-                                 <tr><td style="text-align: right;"><h4>Par Alexis Kinsella</h4></td></tr>
-                             </table>
-                         </td>
-                     </tr>
-                 </table>
-             </div>
-		</section>
-	</div></div>
-
-
-    <div class="slide" id="non-blocking-event-driven"><div>
-   		<section>
-   			<header>
-   			</header>
-               <p style="margin-top:180px; text-align: center">node.js est un serveur javascript <em>event driven non bloquant</em></p>
-   		</section>
-   	</div></div>
-
-
-    <div class="slide" id="first-application">
-        <div>
-            <section>
-                <header>
-                    <h2>Une première application</h2>
-                </header>
-                <pre class="prettyprint"><code class="language-javascript" style="font-size: 14px!important; line-height: 20px;">
-    var http = require('http');
-
-    http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Hello Open-XKE\n');
-    }).listen(9000, 'localhost');
-
-    console.log('Server running at http://localhost:9000/');
-                </code></pre>
-                <pre class="prettyprint"><code class="language-javascript"  style="font-size: 14px!important; line-height: 20px;">
-    node app.js
-                    </code></pre>
-            </section>
-        </div>
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td><h2>Tour d'horizon !</h2></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right;"><h4>Par Alexis Kinsella</h4></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
     </div>
+</div>
 
 
-	<div class="slide" id="thank-you"><div>
-		<section>
-			<header>
-				<h2>Merci !</h2>
-			</header>
-			<p>Alexis Kinsella, Xebia France</p>
-			<ul>
-				<li><a href="http://blog.xeiba.fr">blog.xebia.fr</a></li>
-				<li><a href="http://twitter.com/alexiskinsella">twitter.com/alexiskinsella</a></li>
-				<li><a href="mailto:akinsella@xebia.fr">akinsella@xebia.fr</a></li>
-			</ul>
-			<p>Github: <a href="http://github.com/akinsella/node-overview">github.com/akinsella/node-overview</a></p>
-		</section>
-	</div></div>
+<div class="slide" id="non-blocking-event-driven">
+    <div>
+        <section>
+            <header>
+            </header>
+            <p style="margin-top:180px; text-align: center">Node.js est un serveur JavaScript <span class="green">event driven non bloquant</span></p>
+        </section>
+    </div>
+</div>
 
 
-    <div class="slide" id="inpisred-from"><div>
-   		<section>
-   			<header>
-   				<h2>Copyrights</h2>
-   			</header>
-   			<p>Les slides originaux :</p>
+<div class="slide" id="javascript-question">
+    <div>
+        <section>
+            <header>
+            </header>
+            <p style="margin-top:180px; text-align: center">JavaScript <span class="green">?</span></p>
+        </section>
+    </div>
+</div>
 
-   			<ul>
-   				<li><a href="http://verekia.com/slides/css-preprocessors">Deep dive into Node.js</a> par <a href="https://twitter.com/#!/verekia">John Doe</a></li>
+<div class="slide" id="server-question">
+    <div>
+        <section>
+            <header>
+            </header>
+            <p style="margin-top:180px; text-align: center">Côté serveur <span class="green">?</span></p>
+        </section>
+    </div>
+</div>
+
+<div class="slide" id="threading-question">
+    <div>
+        <section>
+            <header>
+            </header>
+            <p style="margin-top:180px; text-align: center">Et mono threadé en plus <span class="green">?</span></p>
+        </section>
+    </div>
+</div>
+
+<div class="slide" id="wtf-question">
+    <div>
+        <section>
+            <header>
+            </header>
+            <p style="margin-top:180px; text-align: center">WTF <span class="green">!!!</span></p>
+        </section>
+    </div>
+</div>
+
+<div class="slide" id="v8">
+    <div>
+        <section>
+            <header>
+            </header>
+            <p style="margin-top:180px; text-align: center">Oui, grâce au moteur <span class="green">V8</span> de <span class="green">Chrome</span> !</p>
+        </section>
+    </div>
+</div>
+
+<div class="slide" id="javascript">
+    <div>
+        <section>
+            <header>
+            </header>
+            <p style="margin-top:180px; text-align: center">Qui dit <span class="green">JavaScript</span> ...</p>
+        </section>
+    </div>
+</div>
+
+
+<div class="slide" id="coffescript">
+    <div>
+        <section>
+            <header>
+            </header>
+            <p style="margin-top:180px; text-align: center">... dit également <span class="green">CoffeeScript</span> !
+            </p>
+        </section>
+    </div>
+</div>
+
+
+<div class="slide" id="node-install">
+    <div>
+        <section>
+            <header>
+                <h2>Installation</h2>
+            </header>
+                <pre class="prettyprint"><code class="language-shell" style="font-size: 14px!important; line-height: 20px;">
+                    $ brew install node
+                </code></pre>
+        </section>
+    </div>
+</div>
+
+
+<div class="slide cover w" id="hello-world">
+    <div>
+        <section>
+            <header>
+                <h2 class="title white">
+                    Une première <span class="green">application</span>
+                </h2>
+            </header>
+            <img src="pictures/hello-world.jpg" alt="">
+        </section>
+    </div>
+</div>
+
+
+<div class="slide" id="first-application">
+    <div>
+        <section>
+            <header>
+                <h2>En JavaScript <span class="green">...</span></h2>
+            </header>
+                <pre class="prettyprint"><code class="language-javascript" style="font-size: 14px!important; line-height: 20px;">
+                    var http = require('http');
+
+                    http.createServer(function (req, res) {
+                        res.writeHead(200, {'Content-Type': 'text/plain'});
+                        res.end('Hello Open-XKE\n');
+                    }).listen(9000, 'localhost');
+
+                    console.log('Server running at http://localhost:9000/');
+                </code></pre>
+                <pre class="prettyprint"><code class="language-shell" style="font-size: 14px!important; line-height: 20px;">
+                    node app.js
+                </code></pre>
+        </section>
+    </div>
+</div>
+
+
+<div class="slide" id="first-application-coffeescript">
+    <div>
+        <section>
+            <header>
+                <h2><span class="green">...</span> en CoffeeScript</h2>
+            </header>
+                <pre class="prettyprint"><code class="language-coffeescript" style="font-size: 14px!important; line-height: 20px;">
+                    var http = require 'http'
+
+                    http.createServer (req, res) ->
+                        res.writeHead 200, { 'Content-Type': 'text/plain' }
+                        res.end 'Hello Open-XKE\n'
+                    }).listen 9000, 'localhost'
+
+                    console.log 'Server running at http://localhost:9000/'
+                </code></pre>
+                <pre class="prettyprint"><code class="language-javascript" style="font-size: 14px!important; line-height: 20px;">
+                    node app.js
+                </code></pre>
+        </section>
+    </div>
+</div>
+
+<div class="slide cover w" id="tooling">
+    <div>
+        <section>
+            <header>
+                <h2 class="title white">
+                    Parlons un peu <span class="green">outillage ...</span>
+                </h2>
+            </header>
+            <img src="pictures/tooling.jpg" alt="">
+        </section>
+    </div>
+</div>
+
+<div class="slide w" id="package-manager">
+    <div>
+        <section>
+            <header>
+                <h2>Un package manager / <a href="http://npmjs.org">npmjs.org</a></h2>
+            </header>
+            <br/>
+
+            <div style="text-align: center;">
+                <img src="pictures/npm-logo.png" alt="">
+            </div>
+
+            <br/>
+            <pre class="prettyprint"><code class="language-shell" style="font-size: 14px!important; line-height: 20px;">
+                $ curl http://npmjs.org/install.sh | sh
+            </code></pre>
+        </section>
+    </div>
+</div>
+
+<div class="slide w" id="task-runner">
+    <div>
+        <section>
+            <header>
+                <h2>Un task runner / <a href="http://npmjs.org">gruntjs.com</a></h2>
+            </header>
+
+            <div style="text-align: center;">
+                <img src="pictures/grunt-logo.png" alt="" style="width: 240px;">
+            </div>
+
+            <pre class="prettyprint"><code class="language-shell" style="font-size: 14px!important; line-height: 20px;">
+                 $ npm install -g grunt-cli
+                 $ npm install grunt --save-dev
+             </code></pre>
+        </section>
+    </div>
+</div>
+
+
+<div class="slide w" id="why-a-task-runner-question">
+    <div>
+        <section>
+            <header>
+                <h2 style="text-align: center; margin: 150px;">Pourquoi <span class="green">Grunt</span> ?</h2>
+            </header>
+        </section>
+    </div>
+</div>
+
+<div class="slide w" id="why-a-task-runner-answer">
+    <div>
+        <section>
+            <header>
+                <h2 style="text-align: center; margin: 150px;"><span class="green">Automation</span> dude !</h2>
+            </header>
+
+            <div style="text-align: left;">
+                <img src="pictures/automation.jpg" alt="" style="width: 240px;">
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="slide" id="grunt-file">
+    <div>
+        <section>
+            <header>
+                <h2>Lancer une tâche ?</h2>
+            </header>
+                <pre class="prettyprint"><code class="language-shell" style="font-size: 14px!important; line-height: 20px;">
+                    $ grunt {task}
+                </code></pre>
+        </section>
+    </div>
+</div>
+
+
+<div class="slide" id="use-cases-1">
+    <div>
+        <section>
+            <p style="font-size: 36px;"><span class="green">Très bien</span>, mais je peux faire quoi avec <span class="green">node.js</span> ?</p>
+
+            <div style="text-align: right;">
+                <img src="pictures/question-mark.jpg" alt="" style="width: 400px;">
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="slide" id="use-cases-2">
+    <div>
+        <section>
+            <p style="font-size: 36px;"><span class="green">Très bien</span>, mais je peux faire quoi avec <span class="green">node.js</span> ?</p>
+
+            <ul>
+                <li>APIs REST</li>
+                <li>Applications Single page</li>
+                <li>Streaming de données</li>
+                <li>Application temps réel (Paris sportifs, messagerie instantanée, gaming, ...)</li>
+            </ul>
+       </section>
+    </div>
+</div>
+
+<div class="slide" id="use-cases-3">
+    <div>
+        <section>
+            <p style="font-size: 36px;">Domaine d'application possible</p>
+
+            <ul>
+                <li>Applications mobiles</li>
+                <li>Dashboards</li>
+                <li>Paris sportifs</li>
+                <li>Messagerie Instantannée</li>
+                <li>Gaming</li>
                 <li>...</li>
-   			</ul>
-   		</section>
-   	</div></div>
+            </ul>
+       </section>
+    </div>
+</div>
+
+<div class="slide" id="non-use-cases-1">
+    <div>
+        <section>
+            <p style="font-size: 36px;">Et que devrais-je éviter de faire avec <span class="green">node.js</span> ?</p>
+        </section>
+    </div>
+</div>
+
+<div class="slide" id="non-use-cases-2">
+    <div>
+        <section>
+            <p style="font-size: 36px;">Et que devrais-je éviter de faire avec <span class="green">node.js</span> ?</p>
+
+            <ul>
+                <li>Des tâches gourmandes en CPU</li>
+                <li>Des tâches bloquantes</li>
+            </ul>
+        </section>
+    </div>
+</div>
 
 
-	<script src="scripts/script.js"></script>
-	<!-- Copyright © 2010–2012 - Inspired from Vadim Makeev — pepelsbey.net -->
-	<!-- Photos by John Carey — fiftyfootshadows.net -->
+<div class="slide" id="expressjs">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Express<span class="green">JS</span></h2>
+            </header>
 
-    <script>
-        setTimeout(function() { prettyPrint(); }, 100);
-    </script>
+            <p style="margin-top:130px; text-align: center">
+                ExpressJS est un framework <span class="green">minimaliste</span> and <span class="green">flexible</span>,
+                fournissant un ensemble <span class="green">robuste</span> de fonctionalités pour construire des
+                <span class="green">applications</span> <span class="green">single</span> et <span class="green">multi pages</span>, ainsi que des applications web hybrides.</p>
+       </section>
+    </div>
+</div>
+
+
+<div class="slide" id="librairies">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Librairies <span class="green">incontournables</span></h2>
+            </header>
+
+                <table style="font-size: 0.8em; margin-left: 50px;">
+                    <tr><td class="green">request</td><td>Appels REST</td></tr>
+                    <tr><td class="green">mongoose</td><td>Client Mongo</td></tr>
+                    <tr><td class="green">passport</td><td>Authentification</td></tr>
+                    <tr><td class="green">moment</td><td>Gestion des dates</td></tr>
+                    <tr><td class="green">async ou Q</td><td>Flow Control</td></tr>
+                    <tr><td class="green">jsdom</td><td>Implémentation DOM JS</td></tr>
+                    <tr><td class="green">oauth2orize</td><td>Serveur OAuth</td></tr>
+                    <tr><td class="green">oauth</td><td>Client OAuth</td></tr>
+                    <tr><td class="green">oauth</td><td>Temps réel</td></tr>
+                    <tr><td class="green">winston</td><td>Logging</td></tr>
+                </table>
+
+            </section>
+    </div>
+</div>
+
+
+<div class="slide" id="mean-stack-1">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;"><span class="green">MEAN</span> Stack</h2>
+            </header>
+
+            <p style="margin-top:180px; text-align: center">Yet another <span class="green">acronym</span> !</p>
+       </section>
+    </div>
+</div>
+
+
+<div class="slide" id="mean-stack-2">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;"><span class="green">MEAN</span> signifie</h2>
+            </header>
+
+            <ul style="margin: 80px;">
+                <li><span class="green">M</span>ongoDB</li>
+                <li><span class="green">E</span>xpressJS</li>
+                <li><span class="green">A</span>ngular</li>
+                <li><span class="green">N</span>ode.js</li>
+            </ul>
+       </section>
+    </div>
+</div>
+
+<div class="slide" id="mean-stack-3">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;"><span class="green">MEAN</span></h2>
+            </header>
+
+            <div align="center">
+                <table style="margin-top: 150px; text-align: center;">
+                    <tr>
+                        <td style="vertical-align: middle;"><img src="pictures/mongodb-logo.png" alt="" style="width: 180px;" /></td>
+                        <td style="vertical-align: middle;"><img src="pictures/express-logo.png" alt="" style="width: 180px;" /></td>
+                        <td style="vertical-align: middle;"><img src="pictures/angular-logo.jpg" alt="" style="width: 180px;" /></td>
+                        <td style="vertical-align: middle;"><img src="pictures/node-logo.png" alt="" style="width: 180px;" /></td>
+                    </tr>
+                </table>
+            </div>
+
+       </section>
+    </div>
+</div>
+
+<div class="slide" id="mean-stack-4">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">MEAN<span class="green"> vu autrement</span></h2>
+            </header>
+
+            <ul>
+                <li><span class="green">NoSQL</span> Database oriented document</li>
+                <li style="vertical-align: middle;"><span class="green">REST</span> oriented layer</li>
+                <li style="vertical-align: middle;"><span class="green">Single page</span> application</li>
+                <li style="vertical-align: middle;"><span class="green">Event based</span> server</li>
+            </ul>
+
+       </section>
+    </div>
+</div>
+
+<div class="slide" id="failfast-resilient">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Failfast et résilience</h2>
+            </header>
+
+            <ul>
+                <li>Gestion des erreurs spartiate. Si une erreur n'est pas catchée, alors le process tombe</li>
+                <li>Difficulté à catcher les erreurs</li>
+                <li>Outil de monitoring de processus obligatoire</li>
+            </ul>
+
+       </section>
+    </div>
+</div>
+
+<div class="slide" id="domain">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Domaines</h2>
+            </header>
+
+            <ul>
+                <li>Le concept de domaine aide node.js à être plus résilient face aux erreurs</li>
+                <li>Les domaines permettent d’exécuter un callback dans un contexte d’exécution où tous les EventEmitter et les exceptions seront interceptées et rattachées au domaine. </li>
+                <li>Le domaine est lui-même un EventEmitter qui va donc émettre un évènement error quand il a intercepté une erreur.</li>
+            </ul>
+
+            <pre class="prettyprint"><code class="language-javascript" style="font-size: 14px!important; line-height: 20px;">
+                domain.create()
+                   .on('error', function (err) {
+                        // handle error
+                    })
+                    .run(hello);
+            </code></pre>
+
+       </section>
+    </div>
+</div>
+
+<div class="slide" id="clusterization">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Clusterisation</h2>
+            </header>
+
+            <ul>
+                <li>Node propose une API de clusterisation, permettant de multiples instances du programmes</li>
+                <li>Idéalement, une instance par cpu</li>
+                <li>La clusterisation ne supprime par le besoin de monitoring des process</li>
+                <li>L'API de clusterisation est considérée comme instable par la documentation node.js</li>
+                <li>Dans les faits l'API est stable...</li>
+            </ul>
+
+            <pre class="prettyprint"><code class="language-javascript" style="font-size: 14px!important; line-height: 20px;">
+                domain.create()
+                   .on('error', function (err) {
+                        // handle error
+                    })
+                    .run(hello);
+            </code></pre>
+
+       </section>
+    </div>
+</div>
+
+
+
+<div class="slide" id="hosting-1">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;"><span class="green">Hosting</span></h2>
+            </header>
+
+            <style>
+                #hosting-1 table tr td {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                #hosting-1 table tr td:nth-child(even) {
+                    background: #bdc3c7;
+                }
+
+                #hosting-1 table tr td:nth-child(odd) {
+                    background: #ecf0f1;
+                }
+
+                #hosting-1 table tr td ul {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                #hosting-1 table tr td ul li {
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                }
+
+                #hosting-1 ul > li:before {
+                    content: '';
+                }
+            </style>
+
+            <div align="center">
+                <table style="text-align: left; border-collapse: separate;">
+                    <tr style="background: #ecf0f1; text-align: center;">
+                        <td style="vertical-align: middle; width: 150px;"></td>
+                        <td class="green" style="width: 300px;">+</td>
+                        <td class="red" style="width: 300px;">-</td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">PaaS - Heroku, CloudFoundry, Nodejitsu, Appfog, DotCloud, ...</td>
+                        <td>
+                            <ul>
+                                <li>Facilité de déploiement</li>
+                                <li>Elasticité des resources disponibles</li>
+                                <li>Facilité de déploiement</li>
+                                <li>Pas de besoin d'expertise Ops</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Manque de contrôle sur la plateforme (versions de Node et des middlewares)</li>
+                                <li>Resources limitées par ce que propose l'offre</li>
+                                <li>Cumulation d'offres Cloud pour couvrir les besoins d'une application complexe qui peut coûter cher</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">IaaS</td>
+                        <td>
+                            <ul>
+                                <li>Pas de gestion de parc de machine</li>
+                                <li>Dashboard et outillage</li>
+                                <li>AMI pré-configurées disponibles</li>
+                                <li>Grande capacité à scaler et organisation son déploiement selon les besoins</li>
+                                <li>Offre VPN disponible</li>
+                                <li>Pseudo standard</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>On doit se débrouille seul</li>
+                                <li>Prix</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">Serveur dédié</td>
+                        <td>
+                            <ul>
+                                <li>Maintenance du serveur</li>
+                                <li>Prix</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>On doit se débrouille seul</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+       </section>
+    </div>
+</div>
+
+
+
+<div class="slide" id="daemonization-1">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;"><span class="green">Daemonisation</span> d'applications</h2>
+            </header>
+
+            <style>
+                #daemonization-1 table tr td {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                #daemonization-1 table tr td:nth-child(even) {
+                    background: #bdc3c7;
+                }
+
+                #daemonization-1 table tr td:nth-child(odd) {
+                    background: #ecf0f1;
+                }
+
+                #daemonization-1 table tr td ul {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                #daemonization-1 table tr td ul li {
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                }
+
+                #daemonization-1 ul > li:before {
+                    content: '';
+                }
+            </style>
+
+            <div align="center">
+                <table style="text-align: left; border-collapse: separate;">
+                    <tr style="background: #ecf0f1; text-align: center;">
+                        <td style="vertical-align: middle; width: 150px;"></td>
+                        <td class="green" style="width: 300px;">+</td>
+                        <td class="red" style="width: 300px;">-</td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">Upstart</td>
+                        <td>
+                            <ul>
+                                <li>Support natif</li>
+                                <li>Outil mature & stable</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Absent de certaines distributions</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">Forever</td>
+                        <td>
+                            <ul>
+                                <li>Outil dédié à Node.js</li>
+                                <li>Outil mature & Stable</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Lancement manuel ou via un outil de type Upstart</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">Forever</td>
+                        <td>
+                            <ul>
+                                <li>Outil dédié à Node.js</li>
+                                <li>Capacité de clusterisation</li>
+                                <li>Monitoring des noeud</li>
+                                <li>Streaming des logs</li>
+                                <li>Capacité à générer un script d'init'</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Problème de stabilité sur certaines versions de node (Bug Node)</li>
+                                <li>Erreurs parfois peu claires, donc difficiles à corriger</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+       </section>
+    </div>
+</div>
+
+<div class="slide" id="distribution-1">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Distributions</h2>
+            </header>
+
+            <style>
+                #distribution-1 table tr td {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                #distribution-1 table tr td:nth-child(even) {
+                    background: #bdc3c7;
+                }
+
+                #distribution-1 table tr td:nth-child(odd) {
+                    background: #ecf0f1;
+                }
+
+                #distribution-1 table tr td ul {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                #distribution-1 table tr td ul li {
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                }
+
+                #distribution-1 ul > li:before {
+                    content: '';
+                }
+            </style>
+
+            <div align="center">
+                <table style="text-align: left; border-collapse: separate;">
+                    <tr style="background: #ecf0f1; text-align: center;">
+                        <td style="vertical-align: middle; width: 150px;"></td>
+                        <td class="green" style="width: 300px;">+</td>
+                        <td class="red" style="width: 300px;">-</td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">StrongLoop</td>
+                        <td>
+                            <ul>
+                                <li>Support</li>
+                                <li>Tooling</li>
+                                <li>Node commiters</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+       </section>
+    </div>
+</div>
+
+<div class="slide" id="monitoring-1">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;"><span class="green">Monitoring</span></h2>
+            </header>
+
+            <style>
+                #monitoring-1 table tr td {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                #monitoring-1 table tr td:nth-child(even) {
+                    background: #bdc3c7;
+                }
+
+                #monitoring-1 table tr td:nth-child(odd) {
+                    background: #ecf0f1;
+                }
+
+                #monitoring-1 table tr td ul {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                #monitoring-1 table tr td ul li {
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+
+                }
+                #monitoring-1 ul > li:before {
+                    content: '';
+                }
+
+            </style>
+
+            <div align="center">
+                <table style="text-align: left; border-collapse: separate;">
+                    <tr style="background: #ecf0f1; text-align: center;">
+                        <td style="vertical-align: middle; width: 150px;"></td>
+                        <td class="green" style="width: 300px;">+</td>
+                        <td class="red" style="width: 300px;">-</td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">NodeFly</td>
+                        <td>
+                            <ul>
+                                <li>Intégré à la distribution StrongLoop</li>
+                                <li>Leader historique</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Grille tarifaire complexe</li>
+                                <li>Offre de type package</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">Nodetime</td>
+                        <td>
+                            <ul>
+                                <li>Nombreuses métriques</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Dashboard peu pratique</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">New Relic</td>
+                        <td>
+                            <ul>
+                                <li>Dashboard ultra complet</li>
+                                <li>Autres technologies monitorables</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Bêta Privée</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+       </section>
+    </div>
+</div>
+
+<div class="slide" id="thank-you">
+    <div>
+        <section>
+            <header>
+                <h2>Merci !</h2>
+            </header>
+            <p><span class="green">Alexis Kinsella</span>, Xebia France</p>
+            <ul>
+                <li><a href="http://blog.xeiba.fr">blog.xebia.fr</a></li>
+                <li><a href="http://twitter.com/alexiskinsella">twitter.com/alexiskinsella</a></li>
+                <li><a href="mailto:akinsella@xebia.fr">akinsella@xebia.fr</a></li>
+            </ul>
+            <p>Github: <a href="http://github.com/akinsella/node-overview">github.com/akinsella/node-overview</a></p>
+        </section>
+    </div>
+</div>
+
+
+<div class="slide" id="inpisred-from">
+    <div>
+        <section>
+            <header>
+                <h2>Copyrights</h2>
+            </header>
+            <p>Les slides originaux :</p>
+
+            <ul>
+                <li><a href="http://verekia.com/slides/css-preprocessors">Deep dive into Node.js</a> par <a
+                        href="https://twitter.com/#!/verekia">John Doe</a></li>
+                <li>...</li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+
+<script src="scripts/script.js"></script>
+<!-- Copyright © 2010–2012 - Inspired from Vadim Makeev — pepelsbey.net -->
+<!-- Photos by John Carey — fiftyfootshadows.net -->
+
+<script>
+    setTimeout(function () {
+        prettyPrint();
+    }, 100);
+</script>
 </body>
 </html>

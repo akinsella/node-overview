@@ -46,6 +46,138 @@
             color: #7FBF32;
         }
     </style>
+
+    <style>
+        #librairies table tr td:first-child {
+            padding-left: 10px;
+            padding-right: 30px;
+            background: #E8E8E8;
+        }
+        #librairies table tr td:last-child {
+            padding-left: 30px;
+            background: #F2F2F2;
+        }
+    </style>
+    <style>
+        .hosting table tr td {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .hosting table tr td:nth-child(even) {
+            background: #bdc3c7;
+        }
+
+        .hosting table tr td:nth-child(odd) {
+            background: #ecf0f1;
+        }
+
+        .hosting table tr td ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .hosting table tr td ul li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .hosting ul > li:before {
+            content: '';
+        }
+    </style>
+
+    <style>
+        .daemonization table tr td {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .daemonization table tr td:nth-child(even) {
+            background: #bdc3c7;
+        }
+
+        .daemonization table tr td:nth-child(odd) {
+            background: #ecf0f1;
+        }
+
+        .daemonization table tr td ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .daemonization table tr td ul li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .daemonization ul > li:before {
+            content: '';
+        }
+    </style>
+
+    <style>
+        .distribution table tr td {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .distribution table tr td:nth-child(even) {
+            background: #bdc3c7;
+        }
+
+        .distribution table tr td:nth-child(odd) {
+            background: #ecf0f1;
+        }
+
+        .distribution table tr td ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .distribution table tr td ul li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .distribution ul > li:before {
+            content: '';
+        }
+    </style>
+
+    <style>
+        #monitoring-1 table tr td {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #monitoring-1 table tr td:nth-child(even) {
+            background: #bdc3c7;
+        }
+
+        #monitoring-1 table tr td:nth-child(odd) {
+            background: #ecf0f1;
+        }
+
+        #monitoring-1 table tr td ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        #monitoring-1 table tr td ul li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+        }
+        #monitoring-1 ul > li:before {
+            content: '';
+        }
+    </style>
+
 </head>
 <body class="list">
 
@@ -123,16 +255,6 @@
             <header>
             </header>
             <p style="margin-top:180px; text-align: center">Et mono threadé en plus <span class="green">?</span></p>
-        </section>
-    </div>
-</div>
-
-<div class="slide" id="wtf-question">
-    <div>
-        <section>
-            <header>
-            </header>
-            <p style="margin-top:180px; text-align: center">WTF <span class="green">!!!</span></p>
         </section>
     </div>
 </div>
@@ -312,7 +434,7 @@
     <div>
         <section>
             <header>
-                <h2 style="text-align: center; margin: 150px;"><span class="green">Automation</span> dude !</h2>
+                <h2 style="text-align: center; margin: 150px;" class="grey"><span class="green">Automation</span> !!</h2>
             </header>
 
             <div style="text-align: left;">
@@ -357,7 +479,7 @@
                 <li>APIs REST</li>
                 <li>Applications Single page</li>
                 <li>Streaming de données</li>
-                <li>Application temps réel (Paris sportifs, messagerie instantanée, gaming, ...)</li>
+                <li>Application temps réel (Pari sportif, messagerie instantanée, gaming, ...)</li>
             </ul>
        </section>
     </div>
@@ -366,12 +488,12 @@
 <div class="slide" id="use-cases-3">
     <div>
         <section>
-            <p style="font-size: 36px;">Domaine d'application possible</p>
+            <p style="font-size: 36px;"><span class="green">Domaines</span> d'application possible</p>
 
             <ul>
-                <li>Applications mobiles</li>
-                <li>Dashboards</li>
-                <li>Paris sportifs</li>
+                <li>Applications <span class="green">mobiles</span></li>
+                <li><span class="green">Dashboards</span></li>
+                <li>Pari sportif</li>
                 <li>Messagerie Instantannée</li>
                 <li>Gaming</li>
                 <li>...</li>
@@ -394,8 +516,8 @@
             <p style="font-size: 36px;">Et que devrais-je éviter de faire avec <span class="green">node.js</span> ?</p>
 
             <ul>
-                <li>Des tâches gourmandes en CPU</li>
-                <li>Des tâches bloquantes</li>
+                <li>Des tâches gourmandes en <span class="green">CPU</span></li>
+                <li>Des tâches <span class="green">bloquantes</span></li>
             </ul>
         </section>
     </div>
@@ -412,26 +534,28 @@
             <p style="margin-top:130px; text-align: center">
                 ExpressJS est un framework <span class="green">minimaliste</span> and <span class="green">flexible</span>,
                 fournissant un ensemble <span class="green">robuste</span> de fonctionalités pour construire des
-                <span class="green">applications</span> <span class="green">single</span> et <span class="green">multi pages</span>, ainsi que des applications web hybrides.</p>
+                <span class="green">applications</span> <span class="green">single</span> et <span class="green">multi pages</span>, ainsi que des applications <span class="green">web</span> hybrides.</p>
        </section>
     </div>
 </div>
 
 
 <div class="slide" id="librairies">
+
     <div>
         <section>
+
             <header>
                 <h2 style="font-size: 36px;">Librairies <span class="green">incontournables</span></h2>
             </header>
 
                 <table style="font-size: 0.8em; margin-left: 50px;">
-                    <tr><td class="green">request</td><td>Appels REST</td></tr>
+                    <tr><td class="green">request</td><td>Client REST</td></tr>
                     <tr><td class="green">mongoose</td><td>Client Mongo</td></tr>
                     <tr><td class="green">passport</td><td>Authentification</td></tr>
                     <tr><td class="green">moment</td><td>Gestion des dates</td></tr>
                     <tr><td class="green">async ou Q</td><td>Flow Control</td></tr>
-                    <tr><td class="green">jsdom</td><td>Implémentation DOM JS</td></tr>
+                    <tr><td class="green">jsdom</td><td>Implémentation DOM</td></tr>
                     <tr><td class="green">oauth2orize</td><td>Serveur OAuth</td></tr>
                     <tr><td class="green">oauth</td><td>Client OAuth</td></tr>
                     <tr><td class="green">oauth</td><td>Temps réel</td></tr>
@@ -517,13 +641,13 @@
     <div>
         <section>
             <header>
-                <h2 style="font-size: 36px;">Failfast et résilience</h2>
+                <h2 style="font-size: 36px;"><span class="green">Failfast</span> et <span class="green">résilience</span></h2>
             </header>
 
             <ul>
-                <li>Gestion des erreurs spartiate. Si une erreur n'est pas catchée, alors le process tombe</li>
-                <li>Difficulté à catcher les erreurs</li>
-                <li>Outil de monitoring de processus obligatoire</li>
+                <li>Gestion des erreurs <span class="green">spartiate</span>. Si une erreur n'est pas catchée, alors le process tombe</li>
+                <li><span class="green">Difficulté</span> à <span class="green">catcher</span> les erreurs</li>
+                <li>Outil de <span class="green">monitoring</span> de processus <span class="green">obligatoire</span></li>
             </ul>
 
        </section>
@@ -534,13 +658,13 @@
     <div>
         <section>
             <header>
-                <h2 style="font-size: 36px;">Domaines</h2>
+                <h2 style="font-size: 36px;">Les <span class="green">Domaines</span> à la rescousse !</h2>
             </header>
 
             <ul>
-                <li>Le concept de domaine aide node.js à être plus résilient face aux erreurs</li>
-                <li>Les domaines permettent d’exécuter un callback dans un contexte d’exécution où tous les EventEmitter et les exceptions seront interceptées et rattachées au domaine. </li>
-                <li>Le domaine est lui-même un EventEmitter qui va donc émettre un évènement error quand il a intercepté une erreur.</li>
+                <li>Le concept de domaine aide node.js à être plus <span class="green">résilient</span> face aux erreurs</li>
+                <li>Les domaines permettent d’<span class="green">exécuter</span> un <span class="green">callback</span> dans un <span class="green">contexte d’exécution</span> où tous les EventEmitter et les exceptions seront <span class="green">interceptées</span> et rattachées au domaine.</li>
+                <li>Le <span class="green">domaine</span> est <span class="green">lui-même</span> un <span class="green">EventEmitter</span> qui va donc émettre un évènement "error" quand il a intercepté une erreur.</li>
             </ul>
 
             <pre class="prettyprint"><code class="language-javascript" style="font-size: 14px!important; line-height: 20px;">
@@ -555,27 +679,51 @@
     </div>
 </div>
 
-<div class="slide" id="clusterization">
+<div class="slide" id="clusterization-1">
     <div>
         <section>
             <header>
-                <h2 style="font-size: 36px;">Clusterisation</h2>
+                <h2 style="font-size: 36px;">La <span class="green">clusterisation</span></h2>
             </header>
 
             <ul>
-                <li>Node propose une API de clusterisation, permettant de multiples instances du programmes</li>
-                <li>Idéalement, une instance par cpu</li>
+                <li>Node propose une API de clusterisation, permettant de <span class="green">multiples</span> instances du programmes</li>
+                <li>Idéalement, <span class="green">une instance par cpu</span></li>
                 <li>La clusterisation ne supprime par le besoin de monitoring des process</li>
-                <li>L'API de clusterisation est considérée comme instable par la documentation node.js</li>
-                <li>Dans les faits l'API est stable...</li>
+                <li>L'API de clusterisation est considérée comme <span class="green">instable</span> par la documentation node.js</li>
+                <li>Dans les faits l'API est <span class="green">stable</span>...</li>
             </ul>
+       </section>
+    </div>
+</div>
+
+<div class="slide" id="clusterization-2">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">La <span class="green">clusterisation</span></h2>
+            </header>
 
             <pre class="prettyprint"><code class="language-javascript" style="font-size: 14px!important; line-height: 20px;">
-                domain.create()
-                   .on('error', function (err) {
-                        // handle error
-                    })
-                    .run(hello);
+                cluster = require("cluster")
+                http = require("http")
+                numCPUs = require("os").cpus().length
+
+                if cluster.isMaster
+                    # Fork workers.
+                    i = 0
+                    while i < numCPUs
+                        cluster.fork()
+                        i++
+                        cluster.on "exit", (worker, code, signal) ->
+                        console.log "worker " + worker.process.pid + " died"
+                else
+                    # Workers can share any TCP connection
+                    # In this case its a HTTP server
+                    http.createServer((req, res) ->
+                        res.writeHead 200
+                        res.end "hello world\n"
+                    ).listen 8000
             </code></pre>
 
        </section>
@@ -583,43 +731,12 @@
 </div>
 
 
-
-<div class="slide" id="hosting-1">
+<div class="slide hosting" id="hosting-cloud">
     <div>
         <section>
             <header>
-                <h2 style="font-size: 36px;"><span class="green">Hosting</span></h2>
+                <h2 style="font-size: 36px;">Hosting - <span class="green">Cloud (PaaS)</span></h2>
             </header>
-
-            <style>
-                #hosting-1 table tr td {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-
-                #hosting-1 table tr td:nth-child(even) {
-                    background: #bdc3c7;
-                }
-
-                #hosting-1 table tr td:nth-child(odd) {
-                    background: #ecf0f1;
-                }
-
-                #hosting-1 table tr td ul {
-                    margin: 0;
-                    padding: 0;
-                }
-
-                #hosting-1 table tr td ul li {
-                    margin: 0;
-                    padding: 0;
-                    list-style-type: none;
-                }
-
-                #hosting-1 ul > li:before {
-                    content: '';
-                }
-            </style>
 
             <div align="center">
                 <table style="text-align: left; border-collapse: separate;">
@@ -646,6 +763,28 @@
                             </ul>
                         </td>
                     </tr>
+                </table>
+            </div>
+
+       </section>
+    </div>
+</div>
+
+
+<div class="slide hosting" id="hosting-iaas">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Hosting - <span class="green">Cloud (IaaS)</span></h2>
+            </header>
+
+            <div align="center">
+                <table style="text-align: left; border-collapse: separate;">
+                    <tr style="background: #ecf0f1; text-align: center;">
+                        <td style="vertical-align: middle; width: 150px;"></td>
+                        <td class="green" style="width: 300px;">+</td>
+                        <td class="red" style="width: 300px;">-</td>
+                    </tr>
                     <tr>
                         <td class="green" style="vertical-align: middle;">IaaS</td>
                         <td>
@@ -664,6 +803,27 @@
                                 <li>Prix</li>
                             </ul>
                         </td>
+                    </tr>
+                </table>
+            </div>
+
+       </section>
+    </div>
+</div>
+
+<div class="slide hosting" id="hosting-vps">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Hosting - <span class="green">Self Hosting (VPS)</span></h2>
+            </header>
+
+            <div align="center">
+                <table style="text-align: left; border-collapse: separate;">
+                    <tr style="background: #ecf0f1; text-align: center;">
+                        <td style="vertical-align: middle; width: 150px;"></td>
+                        <td class="green" style="width: 300px;">+</td>
+                        <td class="red" style="width: 300px;">-</td>
                     </tr>
                     <tr>
                         <td class="green" style="vertical-align: middle;">Serveur dédié</td>
@@ -687,43 +847,12 @@
 </div>
 
 
-
-<div class="slide" id="daemonization-1">
+<div class="slide daemonization" id="daemonization-upstart">
     <div>
         <section>
             <header>
-                <h2 style="font-size: 36px;"><span class="green">Daemonisation</span> d'applications</h2>
+                <h2 style="font-size: 36px;">Daemonisation d'applications - <span class="green">Upstart</span></h2>
             </header>
-
-            <style>
-                #daemonization-1 table tr td {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-
-                #daemonization-1 table tr td:nth-child(even) {
-                    background: #bdc3c7;
-                }
-
-                #daemonization-1 table tr td:nth-child(odd) {
-                    background: #ecf0f1;
-                }
-
-                #daemonization-1 table tr td ul {
-                    margin: 0;
-                    padding: 0;
-                }
-
-                #daemonization-1 table tr td ul li {
-                    margin: 0;
-                    padding: 0;
-                    list-style-type: none;
-                }
-
-                #daemonization-1 ul > li:before {
-                    content: '';
-                }
-            </style>
 
             <div align="center">
                 <table style="text-align: left; border-collapse: separate;">
@@ -746,6 +875,27 @@
                             </ul>
                         </td>
                     </tr>
+                </table>
+            </div>
+
+       </section>
+    </div>
+</div>
+
+<div class="slide daemonization" id="daemonization-forever">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Daemonisation d'applications - <span class="green">Forever</span></h2>
+            </header>
+
+            <div align="center">
+                <table style="text-align: left; border-collapse: separate;">
+                    <tr style="background: #ecf0f1; text-align: center;">
+                        <td style="vertical-align: middle; width: 150px;"></td>
+                        <td class="green" style="width: 300px;">+</td>
+                        <td class="red" style="width: 300px;">-</td>
+                    </tr>
                     <tr>
                         <td class="green" style="vertical-align: middle;">Forever</td>
                         <td>
@@ -759,6 +909,26 @@
                                 <li>Lancement manuel ou via un outil de type Upstart</li>
                             </ul>
                         </td>
+                    </tr>
+                </table>
+            </div>
+
+       </section>
+    </div>
+</div>
+<div class="slide daemonization" id="daemonization-pm2">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Daemonisation d'applications - <span class="green">PM2</span></h2>
+            </header>
+
+            <div align="center">
+                <table style="text-align: left; border-collapse: separate;">
+                    <tr style="background: #ecf0f1; text-align: center;">
+                        <td style="vertical-align: middle; width: 150px;"></td>
+                        <td class="green" style="width: 300px;">+</td>
+                        <td class="red" style="width: 300px;">-</td>
                     </tr>
                     <tr>
                         <td class="green" style="vertical-align: middle;">Forever</td>
@@ -785,42 +955,12 @@
     </div>
 </div>
 
-<div class="slide" id="distribution-1">
+<div class="slide distribution" id="distribution-strongloop">
     <div>
         <section>
             <header>
-                <h2 style="font-size: 36px;">Distributions</h2>
+                <h2 style="font-size: 36px;">Daemonisation d'applications - <span class="green">StrongLoop</span></h2>
             </header>
-
-            <style>
-                #distribution-1 table tr td {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-
-                #distribution-1 table tr td:nth-child(even) {
-                    background: #bdc3c7;
-                }
-
-                #distribution-1 table tr td:nth-child(odd) {
-                    background: #ecf0f1;
-                }
-
-                #distribution-1 table tr td ul {
-                    margin: 0;
-                    padding: 0;
-                }
-
-                #distribution-1 table tr td ul li {
-                    margin: 0;
-                    padding: 0;
-                    list-style-type: none;
-                }
-
-                #distribution-1 ul > li:before {
-                    content: '';
-                }
-            </style>
 
             <div align="center">
                 <table style="text-align: left; border-collapse: separate;">
@@ -851,43 +991,12 @@
     </div>
 </div>
 
-<div class="slide" id="monitoring-1">
+<div class="slide" id="monitoring-nodefly">
     <div>
         <section>
             <header>
-                <h2 style="font-size: 36px;"><span class="green">Monitoring</span></h2>
+                <h2 style="font-size: 36px;">Monitoring - <span class="green">NodeFly</span></h2>
             </header>
-
-            <style>
-                #monitoring-1 table tr td {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-
-                #monitoring-1 table tr td:nth-child(even) {
-                    background: #bdc3c7;
-                }
-
-                #monitoring-1 table tr td:nth-child(odd) {
-                    background: #ecf0f1;
-                }
-
-                #monitoring-1 table tr td ul {
-                    margin: 0;
-                    padding: 0;
-                }
-
-                #monitoring-1 table tr td ul li {
-                    margin: 0;
-                    padding: 0;
-                    list-style-type: none;
-
-                }
-                #monitoring-1 ul > li:before {
-                    content: '';
-                }
-
-            </style>
 
             <div align="center">
                 <table style="text-align: left; border-collapse: separate;">
@@ -923,6 +1032,104 @@
                                 <li>Dashboard peu pratique</li>
                             </ul>
                         </td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">New Relic</td>
+                        <td>
+                            <ul>
+                                <li>Dashboard ultra complet</li>
+                                <li>Autres technologies monitorables</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Bêta Privée</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+       </section>
+    </div>
+</div>
+
+<div class="slide" id="monitoring-nodetime">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Monitoring - <span class="green">Nodetime</span></h2>
+            </header>
+
+            <div align="center">
+                <table style="text-align: left; border-collapse: separate;">
+                    <tr style="background: #ecf0f1; text-align: center;">
+                        <td style="vertical-align: middle; width: 150px;"></td>
+                        <td class="green" style="width: 300px;">+</td>
+                        <td class="red" style="width: 300px;">-</td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">NodeFly</td>
+                        <td>
+                            <ul>
+                                <li>Intégré à la distribution StrongLoop</li>
+                                <li>Leader historique</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Grille tarifaire complexe</li>
+                                <li>Offre de type package</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">Nodetime</td>
+                        <td>
+                            <ul>
+                                <li>Nombreuses métriques</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Dashboard peu pratique</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">New Relic</td>
+                        <td>
+                            <ul>
+                                <li>Dashboard ultra complet</li>
+                                <li>Autres technologies monitorables</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Bêta Privée</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+       </section>
+    </div>
+</div>
+
+<div class="slide" id="monitoring-newrelic">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Monitoring - <span class="green">NewRelic</span></h2>
+            </header>
+
+            <div align="center">
+                <table style="text-align: left; border-collapse: separate;">
+                    <tr style="background: #ecf0f1; text-align: center;">
+                        <td style="vertical-align: middle; width: 150px;"></td>
+                        <td class="green" style="width: 300px;">+</td>
+                        <td class="red" style="width: 300px;">-</td>
                     </tr>
                     <tr>
                         <td class="green" style="vertical-align: middle;">New Relic</td>

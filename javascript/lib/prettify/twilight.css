@@ -13,7 +13,7 @@ pre.prettyprint span.atn{color:red;}
 pre.prettyprint span.dec{color:yellow;}
 
 
-pre.prettyprint, code.prettyprint {
+pre.prettyprint, pre code {
     background-color: #323232;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;

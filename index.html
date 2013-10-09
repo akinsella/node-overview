@@ -512,7 +512,7 @@
                 <li>Applications <span class="green">mobiles</span></li>
                 <li><span class="green">Dashboards</span></li>
                 <li>Pari sportif</li>
-                <li>Messagerie Instantannée</li>
+                <li>Messagerie instantanée</li>
                 <li>Gaming</li>
                 <li>...</li>
             </ul>
@@ -579,6 +579,7 @@
                     <tr><td class="green">oauth</td><td>Temps réel</td></tr>
                     <tr><td class="green">winston</td><td>Logging</td></tr>
                     <tr><td class="green">node-mailer</td><td>Envoi de mails</td></tr>
+                    <tr><td class="green">node-soap</td><td>Exposer et consommer des web service SOAP</td></tr>
                 </table>
 
             </section>
@@ -620,7 +621,7 @@
     <div>
         <section>
             <header>
-                <h2 style="font-size: 36px;"><span class="green">MEAN</span></h2>
+                <h2 style="font-size: 36px;"><span class="green">MEAN</span> en logo !</h2>
             </header>
 
             <div align="center">
@@ -651,6 +652,19 @@
                 <li style="vertical-align: middle;"><span class="green">Single page</span> application</li>
                 <li style="vertical-align: middle;"><span class="green">Event based</span> server</li>
             </ul>
+
+       </section>
+    </div>
+</div>
+
+<div class="slide cover w" id="failfast">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;"><span class="green">Failfast</span> <span class="white">&</span> <span class="white">résilience</span></h2>
+            </header>
+
+           <img src="pictures/failfast.jpeg" />
 
        </section>
     </div>
@@ -703,6 +717,19 @@
                     })
                     .run(hello);
             </code></pre>
+
+       </section>
+    </div>
+</div>
+
+<div class="slide cover w" id="clusterization">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;"><span class="white">Clusterisation</span></h2>
+            </header>
+
+           <img src="pictures/cpu-wafer.jpg" />
 
        </section>
     </div>
@@ -810,6 +837,30 @@
     </div>
 </div>
 
+<div class="slide" id="zero-downtime-deployment-0">
+    <div>
+        <section>
+            <p style="font-size: 36px; text-align: center; margin-top: 150px;"><span class="green">Zero Downtime</span> Deployment</p>
+        </section>
+    </div>
+</div>
+
+<div class="slide cover w" id="zero-downtime-deployment-github">
+    <div>
+        <section>
+            <img src="pictures/github_downtime.png" />
+       </section>
+    </div>
+</div>
+
+<div class="slide cover w" id="zero-downtime-deployment-twitter">
+    <div>
+        <section>
+            <img src="pictures/twitter_downtime.png" />
+       </section>
+    </div>
+</div>
+
 <div class="slide" id="zero-downtime-deployment">
     <div>
         <section>
@@ -820,128 +871,31 @@
             <ul>
                 <li>Upstart + Respawn</li>
                 <li>Recluster => Nb workers == Nb CPU</li>
+                <li>NGINX => HTTP Proxy / HTTP 502 error page</li>
             </ul>
 
        </section>
     </div>
 </div>
 
-
-<div class="slide hosting" id="hosting-cloud">
+<div class="slide" id="nginx">
     <div>
         <section>
             <header>
-                <h2 style="font-size: 36px;">Hosting - <span class="green">Cloud (PaaS)</span></h2>
+                <h2 style="font-size: 36px;">Utilisation d'<span class="green">NGINX</span></h2>
             </header>
 
-            <div align="center">
-                <table style="text-align: left; border-collapse: separate;">
-                    <tr style="background: #ecf0f1; text-align: center;">
-                        <td style="vertical-align: middle; width: 150px;"></td>
-                        <td class="green" style="width: 300px;">+</td>
-                        <td class="red" style="width: 300px;">-</td>
-                    </tr>
-                    <tr>
-                        <td class="green" style="vertical-align: middle;">Heroku, CloudFoundry, Nodejitsu, Appfog, DotCloud, ...</td>
-                        <td>
-                            <ul>
-                                <li>Facilité de déploiement</li>
-                                <li>Elasticité des resources disponibles</li>
-                                <li>Facilité de déploiement</li>
-                                <li>Pas de besoin d'expertise Ops</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>Manque de contrôle sur la plateforme (versions de Node et des middlewares)</li>
-                                <li>Resources limitées par ce que propose l'offre</li>
-                                <li>Cumulation d'offres Cloud pour couvrir les besoins d'une application complexe qui peut coûter cher</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+            <ul>
+                <li><span class="green">Load balancing</span></li>
+                <li>Prise en charge des <span class="green">resources statiques</span></li>
+                <li>Compression <span class="green">GZip</span></li>
+                <li><span class="green">Délégation des traitement dynamiques</span> à Node.js</li>
+                <li>Affichage de pages spécifiques en cas d'erreur (<span class="green">502</span>, <span class="green">404</span>, ...)</li>
+            </ul>
 
        </section>
     </div>
 </div>
-
-
-<div class="slide hosting" id="hosting-iaas">
-    <div>
-        <section>
-            <header>
-                <h2 style="font-size: 36px;">Hosting - <span class="green">Cloud (IaaS)</span></h2>
-            </header>
-
-            <div align="center">
-                <table style="text-align: left; border-collapse: separate;">
-                    <tr style="background: #ecf0f1; text-align: center;">
-                        <td style="vertical-align: middle; width: 150px;"></td>
-                        <td class="green" style="width: 300px;">+</td>
-                        <td class="red" style="width: 300px;">-</td>
-                    </tr>
-                    <tr>
-                        <td class="green" style="vertical-align: middle;">Amazon EC2</td>
-                        <td>
-                            <ul>
-                                <li>Pas de gestion de parc de machine</li>
-                                <li>Dashboard et outillage</li>
-                                <li>AMI pré-configurées disponibles</li>
-                                <li>Grande capacité à scaler et organisation son déploiement selon les besoins</li>
-                                <li>Offre VPN disponible</li>
-                                <li>Pseudo standard</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>On doit se débrouille seul</li>
-                                <li>Prix</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-       </section>
-    </div>
-</div>
-
-<div class="slide hosting" id="hosting-vps">
-    <div>
-        <section>
-            <header>
-                <h2 style="font-size: 36px;">Hosting - <span class="green">Self Hosting (VPS)</span></h2>
-            </header>
-
-            <div align="center">
-                <table style="text-align: left; border-collapse: separate;">
-                    <tr style="background: #ecf0f1; text-align: center;">
-                        <td style="vertical-align: middle; width: 150px;"></td>
-                        <td class="green" style="width: 300px;">+</td>
-                        <td class="red" style="width: 300px;">-</td>
-                    </tr>
-                    <tr>
-                        <td class="green" style="vertical-align: middle;">Serveur dédié</td>
-                        <td>
-                            <ul>
-                                <li>Maintenance du serveur</li>
-                                <li>Prix</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>On doit se débrouille seul</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-       </section>
-    </div>
-</div>
-
 
 <div class="slide daemonization" id="daemonization-upstart-1">
     <div>
@@ -1109,31 +1063,11 @@
     </div>
 </div>
 
-<div class="slide" id="nginx">
-    <div>
-        <section>
-            <header>
-                <h2 style="font-size: 36px;">Utalisation d'<span class="green">NGINX</span></h2>
-            </header>
-
-            <ul>
-                <li><span class="green">Load balancing</span></li>
-                <li>Prise en charge des <span class="green">resources statiques</span></li>
-                <li>Compression <span class="green">GZip</span></li>
-                <li><span class="green">Délégation des traitement dynamiques</span> à Node.js</li>
-                <li>Affichage de pages spécifiques en cas d'erreur (<span class="green">502</span>, <span class="green">404</span>, ...)</li>
-            </ul>
-
-       </section>
-    </div>
-</div>
-
-
 <div class="slide distribution" id="distribution-strongloop">
     <div>
         <section>
             <header>
-                <h2 style="font-size: 36px;">Daemonisation d'applications - <span class="green">StrongLoop</span></h2>
+                <h2 style="font-size: 36px;">Distributions - <span class="green">StrongLoop</span></h2>
             </header>
 
             <div align="center">
@@ -1155,6 +1089,125 @@
                         <td>
                             <ul>
                                 <li></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div style="text-align: right; margin-top: 100px;">
+                <img src="pictures/strongloop-logo.jpg" style="width: 120px" />
+            </div>
+       </section>
+    </div>
+</div>
+
+
+<div class="slide hosting" id="hosting-cloud">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Hosting - <span class="green">Cloud (PaaS)</span></h2>
+            </header>
+
+            <div align="center">
+                <table style="text-align: left; border-collapse: separate;">
+                    <tr style="background: #ecf0f1; text-align: center;">
+                        <td style="vertical-align: middle; width: 150px;"></td>
+                        <td class="green" style="width: 300px;">+</td>
+                        <td class="red" style="width: 300px;">-</td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">Heroku, CloudFoundry, Nodejitsu, Appfog, DotCloud, ...</td>
+                        <td>
+                            <ul>
+                                <li>Facilité de déploiement</li>
+                                <li>Elasticité des resources disponibles</li>
+                                <li>Facilité de déploiement</li>
+                                <li>Pas de besoin d'expertise Ops</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Manque de contrôle sur la plateforme (versions de Node et des middlewares)</li>
+                                <li>Resources limitées par ce que propose l'offre</li>
+                                <li>Cumulation d'offres Cloud pour couvrir les besoins d'une application complexe qui peut coûter cher</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+       </section>
+    </div>
+</div>
+
+
+<div class="slide hosting" id="hosting-iaas">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Hosting - <span class="green">Cloud (IaaS)</span></h2>
+            </header>
+
+            <div align="center">
+                <table style="text-align: left; border-collapse: separate;">
+                    <tr style="background: #ecf0f1; text-align: center;">
+                        <td style="vertical-align: middle; width: 150px;"></td>
+                        <td class="green" style="width: 300px;">+</td>
+                        <td class="red" style="width: 300px;">-</td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">Amazon EC2</td>
+                        <td>
+                            <ul>
+                                <li>Pas de gestion de parc de machine</li>
+                                <li>Dashboard et outillage</li>
+                                <li>AMI pré-configurées disponibles</li>
+                                <li>Grande capacité à scaler et organisation son déploiement selon les besoins</li>
+                                <li>Offre VPN disponible</li>
+                                <li>Pseudo standard</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>On doit se débrouille seul</li>
+                                <li>Prix</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+       </section>
+    </div>
+</div>
+
+<div class="slide hosting" id="hosting-vps">
+    <div>
+        <section>
+            <header>
+                <h2 style="font-size: 36px;">Hosting - <span class="green">Self Hosting (VPS)</span></h2>
+            </header>
+
+            <div align="center">
+                <table style="text-align: left; border-collapse: separate;">
+                    <tr style="background: #ecf0f1; text-align: center;">
+                        <td style="vertical-align: middle; width: 150px;"></td>
+                        <td class="green" style="width: 300px;">+</td>
+                        <td class="red" style="width: 300px;">-</td>
+                    </tr>
+                    <tr>
+                        <td class="green" style="vertical-align: middle;">Serveur dédié</td>
+                        <td>
+                            <ul>
+                                <li>Maintenance du serveur</li>
+                                <li>Prix</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>On doit se débrouille seul</li>
                             </ul>
                         </td>
                     </tr>

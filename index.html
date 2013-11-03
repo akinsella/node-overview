@@ -191,6 +191,17 @@
     <p>Alexis Kinsella, 4 novembre 2013</p>
 </header>
 
+
+
+<div class="slide cover" id="frontpage">
+    <div>
+        <section style="background: white;">
+            <img src="pictures/logo-jpeg-turquoise.jpg" alt="">
+        </section>
+    </div>
+</div>
+
+
 <div class="slide firstPage" id="cover">
     <div>
         <section>
@@ -263,52 +274,27 @@
     </div>
 </div>
 
-<div class="slide" id="v8">
+<div class="slide" id="v8-engine">
     <div>
-        <section>
+        <section style="background: white">
             <header>
-            </header>
-            <p style="margin-top:180px; text-align: center">Oui, grâce au moteur <span class="green">V8</span> de <span class="green">Chrome</span> !</p>
-        </section>
-    </div>
-</div>
-
-
-<div class="slide cover w" id="v8-engine">
-    <div>
-        <section>
-            <header>
-                <h2>Google <span class="green">V8</span> Engine</h2>
+                <h2 class="grey">Oui, grâce au moteur <span class="green">V8</span> de <span class="green">Chrome</span> !</h2>
             </header>
             <br/>
-
-            <img src="pictures/v8-logo.jpg" alt="">
+            <div align="center">
+                <img src="pictures/chrome-v8.png" alt="" width="400">
+            </div>
         </section>
     </div>
 </div>
 
-<div class="slide" id="javascript">
+<div class="slide" id="node-js-event-loop">
     <div>
-        <section>
-            <header>
-            </header>
-            <p style="margin-top:180px; text-align: center">Qui dit <span class="green">JavaScript</span> ...</p>
+        <section style="background: #444444;">
+            <img src="pictures/node-event-loop.png" alt="" width="800">
         </section>
     </div>
 </div>
-
-
-<div class="slide" id="coffescript">
-    <div>
-        <section>
-            <header>
-            </header>
-            <p style="margin-top:180px; text-align: center">... dit également <span class="green">CoffeeScript</span> !
-            </p>
-        </section>
-    </div>
-</div>
-
 
 <div class="slide" id="node-install">
     <div>
@@ -322,7 +308,6 @@
         </section>
     </div>
 </div>
-
 
 <div class="slide cover w" id="hello-world">
     <div>
@@ -342,7 +327,7 @@
     <div>
         <section>
             <header>
-                <h2>En JavaScript <span class="green">...</span></h2>
+                <h2>Une première <span class="green">application</span></h2>
             </header>
                 <pre class="prettyprint"><code class="language-javascript" style="font-size: 14px!important; line-height: 20px;">
                     var http = require('http');
@@ -355,30 +340,6 @@
                     console.log('Server running at http://localhost:9000/');
                 </code></pre>
                 <pre class="prettyprint"><code class="language-shell" style="font-size: 14px!important; line-height: 20px;">
-                    node app.js
-                </code></pre>
-        </section>
-    </div>
-</div>
-
-
-<div class="slide" id="first-application-coffeescript">
-    <div>
-        <section>
-            <header>
-                <h2><span class="green">...</span> en CoffeeScript</h2>
-            </header>
-                <pre class="prettyprint"><code class="language-coffeescript" style="font-size: 14px!important; line-height: 20px;">
-                    var http = require 'http'
-
-                    http.createServer (req, res) ->
-                        res.writeHead 200, { 'Content-Type': 'text/plain' }
-                        res.end 'Hello Open-XKE\n'
-                    }).listen 9000, 'localhost'
-
-                    console.log 'Server running at http://localhost:9000/'
-                </code></pre>
-                <pre class="prettyprint"><code class="language-javascript" style="font-size: 14px!important; line-height: 20px;">
                     node app.js
                 </code></pre>
         </section>
@@ -452,7 +413,7 @@
     <div>
         <section>
             <header>
-                <h2 style="text-align: center; margin: 150px;" class="grey"><span class="green">Automation</span> !!</h2>
+                <h2 style="text-align: center; margin: 150px;" class="grey"><span class="green">Automatisation</span> !!</h2>
             </header>
 
             <div style="text-align: left;">
@@ -497,7 +458,7 @@
                 <li>APIs REST</li>
                 <li>Applications Single page</li>
                 <li>Streaming de données</li>
-                <li>Application temps réel (Pari sportif, messagerie instantanée, gaming, ...)</li>
+                <li>Application temps réel</li>
             </ul>
        </section>
     </div>
@@ -552,7 +513,7 @@
             <p style="margin-top:130px; text-align: center">
                 ExpressJS est un framework <span class="green">minimaliste</span> and <span class="green">flexible</span>,
                 fournissant un ensemble <span class="green">robuste</span> de fonctionalités pour construire des
-                <span class="green">applications</span> <span class="green">single</span> et <span class="green">multi pages</span>, ainsi que des applications <span class="green">web</span> hybrides.</p>
+                <span class="green">applications</span> <span class="green">single</span> et <span class="green">multi pages</span>.</p>
        </section>
     </div>
 </div>
@@ -567,7 +528,7 @@
                 <h2 style="font-size: 36px;">Librairies <span class="green">incontournables</span></h2>
             </header>
 
-                <table style="font-size: 0.8em; margin-left: 50px;">
+                <table style="font-size: 0.75em; margin-left: 50px;">
                     <tr><td class="green">request</td><td>Client REST</td></tr>
                     <tr><td class="green">mongoose</td><td>Client Mongo</td></tr>
                     <tr><td class="green">passport</td><td>Authentification</td></tr>
@@ -576,10 +537,11 @@
                     <tr><td class="green">jsdom</td><td>Implémentation DOM</td></tr>
                     <tr><td class="green">oauth2orize</td><td>Serveur OAuth</td></tr>
                     <tr><td class="green">oauth</td><td>Client OAuth</td></tr>
-                    <tr><td class="green">oauth</td><td>Temps réel</td></tr>
+                    <tr><td class="green">Socket.io</td><td>Temps réel</td></tr>
                     <tr><td class="green">winston</td><td>Logging</td></tr>
                     <tr><td class="green">node-mailer</td><td>Envoi de mails</td></tr>
                     <tr><td class="green">node-soap</td><td>Exposer et consommer des web service SOAP</td></tr>
+                    <tr><td class="green">node-cron</td><td>Planificateur de tâches</td></tr>
                 </table>
 
             </section>
@@ -897,6 +859,14 @@
     </div>
 </div>
 
+<div class="slide" id="daemonization">
+    <div>
+        <section>
+            <p style="font-size: 36px; text-align: center; margin-top: 180px;"><span class="green">Daemonisation</span></p>
+        </section>
+    </div>
+</div>
+
 <div class="slide daemonization" id="daemonization-upstart-1">
     <div>
         <section>
@@ -1063,6 +1033,14 @@
     </div>
 </div>
 
+<div class="slide" id="distributions">
+    <div>
+        <section>
+            <p style="font-size: 36px; text-align: center; margin-top: 180px;"><span class="green">Distributions</span></p>
+        </section>
+    </div>
+</div>
+
 <div class="slide distribution" id="distribution-strongloop">
     <div>
         <section>
@@ -1103,6 +1081,14 @@
 </div>
 
 
+<div class="slide" id="hosting">
+    <div>
+        <section>
+            <p style="font-size: 36px; text-align: center; margin-top: 180px;"><span class="green">Hosting</span></p>
+        </section>
+    </div>
+</div>
+
 <div class="slide hosting" id="hosting-cloud">
     <div>
         <section>
@@ -1142,7 +1128,6 @@
     </div>
 </div>
 
-
 <div class="slide hosting" id="hosting-iaas">
     <div>
         <section>
@@ -1158,7 +1143,7 @@
                         <td class="red" style="width: 300px;">-</td>
                     </tr>
                     <tr>
-                        <td class="green" style="vertical-align: middle;">Amazon EC2</td>
+                        <td class="green" style="vertical-align: middle;">Amazon EC2, Rackspace, Ovh, Gandi, Azure, ...</td>
                         <td>
                             <ul>
                                 <li>Pas de gestion de parc de machine</li>
@@ -1201,12 +1186,12 @@
                         <td class="green" style="vertical-align: middle;">Serveur dédié</td>
                         <td>
                             <ul>
-                                <li>Maintenance du serveur</li>
                                 <li>Prix</li>
                             </ul>
                         </td>
                         <td>
                             <ul>
+                                <li>Maintenance du serveur</li>
                                 <li>On doit se débrouille seul</li>
                             </ul>
                         </td>
@@ -1215,6 +1200,14 @@
             </div>
 
        </section>
+    </div>
+</div>
+
+<div class="slide" id="monitoring">
+    <div>
+        <section>
+            <p style="font-size: 36px; text-align: center; margin-top: 180px;"><span class="green">Monitoring</span></p>
+        </section>
     </div>
 </div>
 
@@ -1312,7 +1305,7 @@
                         </td>
                         <td>
                             <ul>
-                                <li>Bêta Privée</li>
+                                <li>??</li>
                             </ul>
                         </td>
                     </tr>
@@ -1339,25 +1332,6 @@
         </section>
     </div>
 </div>
-
-
-<div class="slide" id="inpisred-from">
-    <div>
-        <section>
-            <header>
-                <h2>Copyrights</h2>
-            </header>
-            <p>Les slides originaux :</p>
-
-            <ul>
-                <li><a href="http://verekia.com/slides/css-preprocessors">Deep dive into Node.js</a> par <a
-                        href="https://twitter.com/#!/verekia">John Doe</a></li>
-                <li>...</li>
-            </ul>
-        </section>
-    </div>
-</div>
-
 
 <script src="scripts/script.js"></script>
 <!-- Copyright © 2010–2012 - Inspired from Vadim Makeev — pepelsbey.net -->

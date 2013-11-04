@@ -202,7 +202,7 @@
 </div>
 
 
-<div class="slide firstPage" id="cover">
+<div class="slide firstPage hide-logo" id="cover">
     <div>
         <section>
             <div align="center">
@@ -288,7 +288,7 @@
     </div>
 </div>
 
-<div class="slide" id="node-js-event-loop">
+<div class="slide hide-logo" id="node-js-event-loop">
     <div>
         <section style="background: #444444;">
             <img src="pictures/node-event-loop.png" alt="" width="800">
@@ -575,19 +575,9 @@
                 <li><span class="green">A</span>ngular</li>
                 <li><span class="green">N</span>ode.js</li>
             </ul>
-       </section>
-    </div>
-</div>
-
-<div class="slide" id="mean-stack-3">
-    <div>
-        <section>
-            <header>
-                <h2 style="font-size: 36px;"><span class="green">MEAN</span> en logo !</h2>
-            </header>
 
             <div align="center">
-                <table style="margin-top: 150px; text-align: center;">
+                <table style="text-align: center;">
                     <tr>
                         <td style="vertical-align: middle;"><img src="pictures/mongodb-logo.png" alt="" style="width: 180px;" /></td>
                         <td style="vertical-align: middle;"><img src="pictures/express-logo.png" alt="" style="width: 180px;" /></td>
@@ -596,12 +586,12 @@
                     </tr>
                 </table>
             </div>
-
        </section>
     </div>
 </div>
 
-<div class="slide" id="mean-stack-4">
+
+<div class="slide" id="mean-stack-3">
     <div>
         <section>
             <header>
@@ -1250,7 +1240,7 @@
 <div class="slide cover w" id="monitoring-nodefly-dashboard">
     <div>
         <section>
-            <img src="pictures/nodefly-dashboard.jpg" />
+            <img src="pictures/nodefly-dashboard.png" />
        </section>
     </div>
 </div>
@@ -1369,7 +1359,7 @@
     <div>
         <section>
             <header>
-                <h2>Merci !</h2>
+                <h2><span class="green">Merci !</span></h2>
             </header>
             <p><span class="green">Alexis Kinsella</span>, Xebia France</p>
             <ul>
@@ -1390,6 +1380,12 @@
     setTimeout(function () {
         prettyPrint();
     }, 100);
+
+    $(document).ready(function() {
+        $("div.slide").append('<img src="pictures/logo-jpeg-turquoise.jpg" class="img-logo" />');
+        $("div.slide.cover img.img-logo").remove();
+        $("div.slide.hide-logo img.img-logo").remove();
+    });
 </script>
 </body>
 </html>

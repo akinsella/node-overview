@@ -257,7 +257,7 @@
     <div>
         <section>
             <header>
-                <h2 class="grey">Références</h2>
+                <h2 class="green">Références</h2>
             </header>
 
             <div align="center">
@@ -329,7 +329,7 @@
 
 <div class="slide hide-logo" id="node-js-event-loop">
     <div>
-        <section style="background: #444444;">
+        <section style="background: #222222;">
             <img src="pictures/node-event-loop.png" alt="" width="800">
         </section>
     </div>
@@ -339,11 +339,17 @@
     <div>
         <section>
             <header>
-                <h2>Installation</h2>
+                <h2 class="green">Installation</h2>
             </header>
-                <pre class="prettyprint"><code class="language-shell" style="font-size: 14px!important; line-height: 20px;">
-                    $ brew install node
-                </code></pre>
+            <pre class="prettyprint"><code class="language-shell" style="font-size: 14px!important; line-height: 20px;">
+                $ brew install node
+            </code></pre>
+
+            <br />
+            <br />
+            <div align="right">
+                ... Ou bien via un <span class="green">installeur standard</span>
+            </div>
         </section>
     </div>
 </div>
@@ -452,7 +458,7 @@
     <div>
         <section>
             <header>
-                <h2 style="text-align: center; margin: 150px;" class="grey"><span class="green">Automatisation</span> !!</h2>
+                <h2 style="text-align: center; margin: 150px;" class="grey" nowrap>L'<span class="green">automatisation</span> des tâches!!</h2>
             </header>
 
             <div style="text-align: left;">
@@ -466,7 +472,7 @@
     <div>
         <section>
             <header>
-                <h2>Lancer une tâche ?</h2>
+                <h2><span class="green">Lancer une tâche</span> ?</h2>
             </header>
                 <pre class="prettyprint"><code class="language-shell" style="font-size: 14px!important; line-height: 20px;">
                     $ grunt {task}
@@ -495,7 +501,7 @@
 
             <ul>
                 <li>APIs REST</li>
-                <li>Applications Single page</li>
+                <li>Applications single page</li>
                 <li>Streaming de données</li>
                 <li>Application temps réel</li>
             </ul>
@@ -534,8 +540,8 @@
             <p style="font-size: 36px;">Et que devrais-je éviter de faire avec <span class="green">node.js</span> ?</p>
 
             <ul>
-                <li>Des tâches gourmandes en <span class="green">CPU</span></li>
-                <li>Des tâches <span class="green">bloquantes</span></li>
+                <li>Les tâches gourmandes en <span class="green">CPU</span></li>
+                <li>Les tâches <span class="green">bloquantes</span></li>
             </ul>
         </section>
     </div>
@@ -549,7 +555,7 @@
             </header>
 
             <p style="margin-top:130px; text-align: center">
-                ExpressJS est un framework <span class="green">minimaliste</span> and <span class="green">flexible</span>,
+                ExpressJS est un framework web <span class="green">minimaliste</span> and <span class="green">flexible</span>,
                 fournissant un ensemble <span class="green">robuste</span> de fonctionalités pour construire des
                 <span class="green">applications</span> <span class="green">single</span> et <span class="green">multi pages</span>.</p>
        </section>
@@ -669,7 +675,7 @@
 
             <ul>
                 <li>Gestion des erreurs <span class="green">spartiate</span>. Si une erreur n'est pas catchée, alors le process tombe</li>
-                <li><span class="green">Difficulté</span> à <span class="green">catcher</span> les erreurs</li>
+                <li><span class="green">Difficulté</span> de <span class="green">catcher</span> les erreurs</li>
                 <li>Outil de <span class="green">monitoring</span> de processus <span class="green">obligatoire</span></li>
             </ul>
 
@@ -685,9 +691,9 @@
             </header>
 
             <ul>
-                <li>Le concept de domaine aide node.js à être plus <span class="green">résilient</span> face aux erreurs</li>
-                <li>Les domaines permettent d’<span class="green">exécuter</span> un <span class="green">callback</span> dans un <span class="green">contexte d’exécution</span> où tous les EventEmitter et les exceptions seront <span class="green">interceptées</span> et rattachées au domaine.</li>
-                <li>Le <span class="green">domaine</span> est <span class="green">lui-même</span> un <span class="green">EventEmitter</span> qui va donc émettre un évènement "error" quand il a intercepté une erreur.</li>
+                <li>Objectif: Etre plus <span class="green">résilient</span> face aux erreurs</li>
+                <li>Avoir un <span class="green">code sandboxé</span></li>
+                <li>Un domaine émet un <span class="green">évènement "error"</span> quand il <span class="green">intercepte</span> une erreur.</li>
             </ul>
        </section>
     </div>
@@ -1419,7 +1425,7 @@
     <div>
         <section>
             <header>
-                <h2 class="grey">Références</h2>
+                <h2 class="green">Références</h2>
             </header>
 
             <div align="center">

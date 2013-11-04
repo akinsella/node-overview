@@ -739,11 +739,11 @@
             </header>
 
             <ul>
-                <li>Node propose une API de clusterisation, permettant de <span class="green">multiples</span> instances du programmes</li>
+                <li>L'API de clusterisation, permettant de lancer de <span class="green">multiples</span> instances du programmes</li>
                 <li>Idéalement, <span class="green">une instance par cpu</span></li>
-                <li>La clusterisation ne supprime par le besoin de monitoring des process</li>
-                <li>L'API de clusterisation est considérée comme <span class="green">instable</span> par la documentation node.js</li>
-                <li>Dans les faits l'API est <span class="green">stable</span>...</li>
+                <li>Ne supprime par le besoin de monitoring des process</li>
+                <li>API considérée comme <span class="green">instable</span> par la documentation node.js</li>
+                <li>Dans les faits l'API <span class="green">évolue peu</span>...</li>
             </ul>
        </section>
     </div>
@@ -768,9 +768,9 @@
                         cluster.fork()
                         i++
                         cluster.on "exit", (worker, code, signal) ->
-                        console.log "worker " + worker.process.pid + " died"
+                            console.log "worker " + worker.process.pid + " died"
                 else
-                    # Workers can share any TCP connection
+                    # Workers can share any TCP connection.
                     # In this case its a HTTP server
                     http.createServer((req, res) ->
                         res.writeHead 200
@@ -791,7 +791,8 @@
 
             <ul>
                 <li>Clusterise n'importe quelle application node.js (HTTP)</li>
-                <li>Reload automatique sur changement de fichier: </li>
+                <li>Reload automatique sur <span class="green">changement de fichier</span> ...</li>
+                <li>Ou bien sur l'envoi d'un <span class="green">signal</span> au process</li>
             </ul>
 
             <pre class="prettyprint"><code class="language-shell" style="font-size: 14px!important; line-height: 20px;">
@@ -841,18 +842,10 @@
     </div>
 </div>
 
-<div class="slide cover w" id="zero-downtime-deployment-github">
+<div class="slide cover" id="zero-downtime-deployment-github">
     <div>
         <section>
-            <img src="pictures/github_downtime.png" />
-       </section>
-    </div>
-</div>
-
-<div class="slide cover w" id="zero-downtime-deployment-twitter">
-    <div>
-        <section>
-            <img src="pictures/twitter_downtime.png" />
+            <img src="pictures/github_downtime.png" width="1024" />
        </section>
     </div>
 </div>
@@ -865,9 +858,9 @@
             </header>
 
             <ul>
-                <li>Upstart + Respawn</li>
-                <li>Recluster => Nb workers == Nb CPU</li>
-                <li>NGINX => HTTP Proxy / HTTP 502 error page</li>
+                <li><span class="green">Upstart</span> + <span class="green">Respawn</span></li>
+                <li><span class="green">Recluster</span> => Nb workers == Nb CPU</li>
+                <li><span class="green">NGINX</span> => HTTP Proxy / HTTP <span class="green">502</span> error page</li>
             </ul>
 
        </section>

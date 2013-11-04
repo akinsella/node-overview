@@ -25,12 +25,33 @@ BODY {
     color: #7FBF32;
 }
 
+.purple {
+    color: #8a3f96;
+}
+
 .red {
     color: #e74c3c;
 }
 
 /* Slide
 ---------------------------------------- */
+
+.slide>img.img-logo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+body.list .slide>img.img-logo {
+
+    height: 76px;
+}
+
+body.full .slide>img.img-logo {
+
+    height: 120px;
+}
+
 .slide:after {
 	counter-increment:paging;
 	content:counter(paging, decimal-leading-zero);
